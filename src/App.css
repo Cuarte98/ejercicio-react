@@ -1,38 +1,66 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  background-color: black;
+  font-family: 'Montserrat', serif;
 }
 
-.App-link {
-  color: #61dafb;
+.simulator {
+  background: #003b67;
+  width: 500px;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.simulator__summary {
+  display: flex;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #00355d;
+}
+
+.simulator__result {
+  padding: 6px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.simulator__label_fee {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.simulator__fee {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.simulator__primary_button {
+  text-align: center;
+  background-color: #17aa8d;
+  padding: 8px;
+  flex-basis: 60%;
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+.simulator__secondary_button {
+  padding: 8px;
+  flex-basis: 38%;
+  background-color: #0b548b;
+}
+
+button {
+  text-transform: uppercase;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
 }

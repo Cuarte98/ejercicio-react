@@ -1,0 +1,35 @@
+.slider {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.slider__title {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.slider__current-value {
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 4px 12px;
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.slider__wrapper {
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.slider__wrapper div {
+  flex-basis: 100%;
+}
