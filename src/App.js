@@ -2,19 +2,26 @@ import React, { useState } from 'react'
 import './App.css'
 import CustomSlider from './components/CustomSlider'
 
+const currencyParser = value =>
+  value.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    currencyDisplay: 'symbol',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  })
+
 function App() {
   const [totalAmount, setTotalAmount] = useState(5000)
   const [fee, setFee] = useState(3)
 
-  const calculateMonthlyFee = () =>
-    parseFloat((totalAmount / fee).toFixed(2)).toLocaleString('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      currencyDisplay: 'symbol',
-    })
+  const calculateMonthlyFee = () => {
+    if (totalAmount > 50000 || totalAmount < 5000 || fee < 3 || fee > 24) return 'ERROR'
+
+    return currencyParser(totalAmount / fee)
+  }
 
   // TODO: Currency Parser function
-  // TODO: Create input on Values
 
   return (
     <div className="App">

@@ -14,11 +14,31 @@
 }
 
 .slider__current-value {
+  display: flex;
   font-weight: bold;
   border: 1px solid white;
-  padding: 4px 12px;
+  padding: 4px 10px;
   width: 120px;
   margin-bottom: 20px;
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.slider__current-value input {
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-family: inherit;
+  width: 100%;
+  font-size: inherit;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .slider__wrapper {

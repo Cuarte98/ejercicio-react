@@ -8,15 +8,22 @@ const CustomSlider = ({ min, max, title, isCurrency, value, valueCallback }) => 
   <div className="slider">
     <span className="slider__title">{title}</span>
     <span className="slider__current-value">
-      {isCurrency && '$ '}
-      {value.toLocaleString('currency')}
+      {isCurrency && '$'}
+      <input
+        value={value}
+        type="number"
+        min={min}
+        max={max}
+        onChange={event => {
+          valueCallback(event.target.value)
+        }}
+      />
     </span>
+    {/* {isCurrency && '$ '}
+      {value.toLocaleString('currency')} */}
     <div className="slider__wrapper">
       <Slider min={min} max={max} onChange={valueCallback} />
-      <span className="slider__min-label">
-        {isCurrency && '$ '}
-        {min}
-      </span>
+      <span className="slider__min-label">{min}</span>
       <span className="slider__max-label">
         {isCurrency && '$ '}
         {max}
